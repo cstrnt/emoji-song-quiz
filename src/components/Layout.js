@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
+
 const Layout = ({ children }) => (
   <div className="app">
+    <h1>Emoji Song Quiz 🤔</h1>
     <div className="content">{children}</div>
     <style jsx global>{`
       .app {
@@ -25,8 +28,16 @@ const Layout = ({ children }) => (
         width: fit-content;
         margin: 0 auto;
       }
+      h1 {
+        text-align: center;
+        padding-top: 1rem;
+      }
     `}</style>
   </div>
 );
+
+Layout.propTypes = {
+  children: PropTypes.node,
+};
 
 export default Layout;
